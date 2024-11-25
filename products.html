@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Products</title>
+    <!--  Box Icons  -->
+    <link rel="stylesheet"
+    href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+
+<style>
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+Ahom&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 4rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+}
+/* Variables */
+:root{
+    --main-color:  #e48b8b;
+    --second-color: #f5b1b3;
+    --text-color: #1b1b1b;
+    --background-color: #ea95c3;
+
+    /*Box Shadow*/
+    --box-shadow: 2px 2px 10px 4px rgb(14 55 54 / 15%);
+}
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    padding: 50px 100px;
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 65px;
+    transition: 0.3s linear;
+    background-color: #ea9091;
+}
+header .shadow{
+background-color: #ea9091;
+box-shadow: var(--box-shadow);
+}
+.logo img{
+    width: 85px;
+    mix-blend-mode: multiply;
+}
+.navbar {
+    display: flex;
+}
+.navbar a{
+    padding: 8px 17px;
+    color: #fff;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 500;
+   
+}
+.navbar a:hover{
+    background-color: #eb6c6cce;
+    border-radius: 0.3rem;
+    transition: 0.2s all linear;
+}
+.navbar .active{
+    top: 100%;
+}
+.Heading{
+    text-align: center;
+}
+.Heading h2{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    padding-top: 100px;
+}
+.Products-Container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,auto));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.Products-Container .box{
+    position: relative;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    justify-content: center;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    margin: 10px;
+}
+.Products-Container img{
+   width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.Products-Container .box h3 {
+font-size: 1rem;
+font-weight: 600;
+text-transform: uppercase;
+margin: 0.5rem 0 0.5rem;
+}
+.Products-Container .box .content{
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+}
+.Products-Container .box .content span{
+    padding: 0 1rem;
+    color: #fff;
+    background: #eb6c6cce;
+    border-radius: 4px;
+    font-weight: 500;
+}
+.Products-Container .box .content a{
+    padding: 0 1rem;
+    color: var(--text-color);
+    border: 2px solid #eb6c6cce;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+.Products-Container .box .content a:hover{
+    background: #eb6c6cce;
+    color: var(--text-color);
+    transition: 0.2s all linear;
+}
+
+.Footer{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(100px,auto));
+    gap: 1.5rem;   
+ }
+ .Footer-Box h2{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    align-items: center;
+ }
+ .Footer-Box p{
+    font-size: 0.968rem;
+    margin-bottom: 10px;
+ }
+ .Social{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+ }
+ .Social a .bx{
+    font-size: 24px;
+    color: var(--text-color);
+    padding: 10px;
+    background: var(--second-color);
+    border-radius: 0.2rem;
+ }
+ .Social a .bx:hover{
+    background: #ea9091;
+    color: var(--second-color);
+ }
+ .Footer-Box h3{
+    font-weight: 600;
+    margin-bottom: 10px;
+ }
+ .Footer-Box h2{
+    text-align: center;
+ }
+ .Footer-Box li a{
+    color: var(--text-color);
+ }
+ .Footer-Box li a:hover{
+    color: #ea9091;
+ }
+ .Footer-map{
+    align-items: center;
+    text-align: center;
+ }
+ .Contact{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+ }
+ .Contact span{
+    display: flex;
+    align-items: center;
+ }
+ .Contact i{
+    font-size: 20px;
+    margin-right: 1rem;
+}
+.Copyright {
+    text-align: Center;
+    text-align: center;
+    background: #f4a1a3;
+}
+</style>
+</head>
+<body>
+ <!-- Navbar -->
+ <header>
+    <a href="#" class="logo">
+        <img src="Haven.png" alt="Beauty Glam">
+
+<!--  Links -->
+<ul class="navbar">
+<li><a href="index.html">Home</a></li>
+<li><a href="#Products">Products</a></li>
+</ul>
+ </header>
+
+       <!--Products -->
+       <section class="Products" id="Products">
+        <div class="Heading">
+            <h2>Our Products</h2>
+        </div>
+        <!--Container-->
+        <div class="Products-Container">
+            <div class="box" id="Products-Image" data-name="Product Name">
+                <img src="Lashes 3.jpeg" alt="">
+                <h3>XO Wispy Lashes</h3>
+                <div class="content">
+                    <span>11000 rwf</span>
+                    <a href="#">Add to Cart</a>
+                </div>
+            </div>
+            <div class="box" data-name="Product Name">
+                <img src="Lash 1.jpeg" alt="">
+                <h3>XO Mega Lashes</h3>
+                <div class="content">
+                    <span>12000 rwf</span>
+                    <a href="#">Add to Cart</a>
+                </div>
+            </div>
+            <div class="box" data-name="Product Name">
+                <img src="Lash 2.jpeg" alt="">
+                <h3>Vegan Luxe Lashes</h3>
+                <div class="content">
+                    <span>13000 rwf</span>
+                    <a href="#">Add to Cart</a>
+                </div>
+            </div>
+                        <div class="box" data-name="Product Name">
+                <img src="mmLashes 1.jpeg" alt="">
+                <h3>Silk Cat-eye Lashes</h3>
+                <div class="content">
+                    <span>13000 rwf</span>
+                    <a href="#">Add to Cart</a>
+                </div>
+            </div>
+            <div class="box" data-name="Product Name">
+                <img src="mmLashes 2.jpeg" alt="">
+                <h3>Mink Hybrid Lashes</h3>
+                <div class="content">
+                    <span>13000 rwf</span>
+                    <a href="#">Add to Cart</a>
+                </div>
+            </div>
+            <div class="box" data-name="Product Name">
+                <img src="mmlashes 4.jpeg" alt="">
+                <h3>Mega Synthetic Lashes</h3>
+                <div class="content">
+                    <span>13000 rwf</span>
+                    <a href="#">Add to Cart</a>
+                </div>
+            </div>
+
+            <div class="box" data-name="Product Name">
+                <img src="Press On 3.jpeg" alt="">
+                <h3>Pink Nails with Flowers</h3>
+                <div class="content">
+                    <span>8000 rwf</span>
+                    <a href="#">Add to Cart</a>
+                </div>
+            </div>
+            <div class="box" data-name="Product Name">
+                <img src="Press On 2.jpeg" alt="">
+                <h3>Nude Brown Nails</h3>
+                <div class="content">
+                    <span>7000 rwf</span>
+                    <a href="#">Add to Cart</a>
+                </div>
+            </div>
+            <div class="box" data-name="Product Name">
+                <img src="Press On 1.jpeg" alt="">
+                <h3>White Nails with a Bow</h3>
+                <div class="content">
+                    <span>12000 rwf</span>
+                    <a href="#">Add to Cart</a>
+                </div>
+            </div>
+            <div class="box" data-name="Product Name">
+                <img src="Heart-Shaped Pattern With Rhinestones.jpeg" alt="">
+                <h3>White Nails with a Pink Bow & Diamonds</h3>
+                <div class="content">
+                    <span>8000 rwf</span>
+                    <a href="#">Add to Cart</a>
+                </div>
+            </div>
+            <div class="box" data-name="Product Name">
+                <img src="Coffin White French Acrylic Nails Tips Pink Bow TIE.jpeg" alt="">
+                <h3>Baby Purple Nails with a Pink Bow</h3>
+                <div class="content">
+                    <span>12000 rwf</span>
+                    <a href="#">Add to Cart</a>
+                </div>
+            </div>
+            <div class="box" data-name="Product Name">
+                <img src="white nails with animation.jpeg" alt="">
+                <h3>White Nails with a pink flower</h3>
+                <div class="content">
+                    <span>7000 rwf</span>
+                    <a href="#">Add to Cart</a>
+                </div>
+            </div>
+            <div class="box" data-name="Product Name">
+                <img src="flower bow nails.jpeg" alt="">
+                <h3>White Nails with Flowers & a Pink Bow </h3>
+                <div class="content">
+                    <span>12000 rwf</span>
+                    <a href="#">Add to Cart</a>
+                </div>
+            </div>
+            <div class="box" data-name="Product Name">
+                <img src="Nail art 💅🏻.jpeg" alt="">
+                <h3>Light Green Nails with Diamonds Beads</h3>
+                <div class="content">
+                    <span>7000 rwf</span>
+                    <a href="#">Add to Cart</a>
+                </div>
+            </div>
+            <div class="box" data-name="Product Name">
+                <img src="ITS NICE.jpeg" alt="">
+                <h3>Dark Red Nails with a white Bow </h3>
+                <div class="content">
+                    <span>8000 rwf</span>
+                    <a href="#">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+     </section> 
+     <section class="Footer">
+        <div class="Footer-Box">
+        <h3>Lustre & Bloom Haven</h3>
+        <p>
+            Our mission is to value and expand our reach<br>
+            And bringing our unique approach to beauty to more communities.<br>
+            And with the vision to transform how people think about beauty, <br>
+            making it a tool for empowerment and self-expression.<br>
+            </p>
+            <p><strong>YOU CAN ALSO VISIT US ON</strong></p>
+            <div class="Social">
+            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+            <a href="#"><i class='bx bxl-twitter'></i></a>
+            <a href="#"><i class='bx bxl-tiktok'></i></a>
+        </div>
+    </div>
+     <div class="Footer-Box">
+            <h3>Contact</h3>
+            <div class="Contact">
+                <span><i class='bx bxs-envelope'></i><a href="mailto:abizeyetracy@gmail.com">abizeyetracy@gmail.com</a></span>
+                <span><i class='bx bxs-phone' ></i><a href="tel:+250 787 877 658">+250 787 877 658</a></span>
+                <span><i class='bx bxs-message-rounded'></i><a href="sms:+250 787 877 658">+250 787 877 658</a></span>
+                <span><i class='bx bxs-map' ></i>KK 325 Kicukiro Kigali City, Rwanda </span>
+                <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<a href="https://maps.app.goo.gl/weNTMX8a2qpo4GfZ9" target="_blank" style="padding: 5px 10px; background-color: #faa2a5; color: #000000; text-decoration: none; border-radius: 5px; text-align: center;">
+Find Us Here
+</a>
+            </div>
+</body>
+</html>

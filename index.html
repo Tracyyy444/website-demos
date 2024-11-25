@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUSTRE & BLOOM HAVEN</title>
+    <!--  link TO CSS  -->
+  
+    <link rel="stylesheet" href="style.css">
+
+    <!--  Box Icons  -->
+    <link rel="stylesheet"
+    href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+
+</head>
+<body>
+    
+    <!-- Navbar -->
+     <header>
+        <a href="#" class="logo">
+            <img src="Haven.png" alt="Beauty Glam">
+        </a>
+        <!--  Menu-Icon  -->
+        <i class='bx bx-menu' id="menu-icon"></i> 
+
+<!--  Links -->
+<ul class="navbar">
+<li><a href="#Home">Home</a></li>
+<li><a href="#About">About Us</a></li>
+<li><a href="#Products">Products</a></li>
+<li><a href="#Customers">Customers</a></li>
+</ul>
+
+<!-- Icon -->
+ <div class="header-icon">
+    <i class='bx bx-cart'></i>
+    <i class='bx bx-search'  id="search-icon"></i>
+ </div>
+ <!-- Search Box-->
+ <div class="search-box">
+    <input type="text" id="search-input" placeholder="Search..." onkeyup="filterProducts()">
+</div>
+     </header>
+     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            function toggleSearch() {
+                var searchBox = document.querySelector('.search-box');
+                if (searchBox) {
+                    searchBox.style.display = searchBox.style.display === 'none' ? 'block' : 'none';
+                } else {
+                    console.error('Search box element not found');
+                }
+            }
+    
+            document.getElementById('search-icon').onclick = toggleSearch;
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+    const menuIcon = document.querySelector('#menu-icon');
+    const navbar = document.querySelector('.navbar');
+
+    if (menuIcon) {
+        menuIcon.onclick = () => {
+            navbar?.classList.toggle('active'); // Toggle only if `navbar` exists
+        };
+    } else {
+        console.error('#menu-icon not found!');
+    }
+});
+
+let Search = document.querySelector('.Search-Box');
+let navbar = document.querySelector('.navbar');
+let header = document.querySelector('header');
+
+document.querySelector('#search-icon').onclick = () => {
+    Search.classList.toggle('active'); 
+    navbar.classList.remove('active');
+}
+document.querySelector('#menu-icon').onclick = () => {
+    navbar.classList.toggle('active');
+    Search.classList.remove('active');
+}
+window.onscroll = () => {
+    if (navbar) navbar.classList.remove('active');
+    if (Search) Search.classList.remove('active');
+}
+const searchIcon = document.querySelector('#search-icon');
+const menuIcon = document.querySelector('#menu-icon');
+
+if (searchIcon) {
+    searchIcon.onclick = () => {
+        Search.classList.toggle('active'); 
+        navbar.classList.remove('active');
+    };
+}
+if (menuIcon) {
+    menuIcon.onclick = () => {
+        navbar.classList.toggle('active');
+        Search.classList.remove('active');
+    };
+}
+document.querySelector('#search-icon').onclick = () => {
+    console.log('Search icon clicked');
+    Search.classList.toggle('active'); 
+    navbar.classList.remove('active');
+};
+window.addEventListener('scroll', () => { 
+    header.classList.toggle('shadow', window.scrollY > 0); 
+});
+
+    </script>
+     <!--Home -->
+     <section class="Home" id="Home">
+<div class="Home-text">
+<h1>Elevate Your Look <br> Effortlessly</h1>
+<br>
+<br>
+<p>Welcome to LUSTRE & BLOOM HAVEN, your haven for beauty and relaxation. Our expert team is dedicated to providing luxurious treatments tailored to your unique style<br><br>
+    Our mission is to value and expand our reach, bringing our unique approach to beauty to more communities, <br> And with the vision to transform how people think about beauty, making it a tool for empowerment and self-expression. looking ahead to a brighter, more beautiful future."
+</p>
+<br>
+<li><a href="#"><h2>Get Yours Now!</h2></a></li>
+<br>
+<br>
+<a href="products.html" class="btn">Shop Now</a>
+</div>
+<div class="Home-img">
+    <img src="Main.jpg" alt="Beauty Queen">
+</div>
+     </section>
+     <!-- About -->
+      <section class="About" id="About">
+      <div class="About-img">
+        <img src="About2.jpeg" alt="">
+      </div>
+      <div class="About">
+
+        <h2>OUR HISTORY</h2>
+        <br>
+        <p>In 2022, our founder Tracy started Lustre & Bloom Haven with a dream: to empower individuals through beauty. Inspired After experiencing a lack of inclusive beauty products, the founder sought to create solutions for all, we opened our first store in Kigali City.</p>
+        <p> From those humble beginnings, we have grown from a small studio in a cozy downtown space but now has grown into a thriving multi-location business serving thousands of loyal customers, and today, we proudly serve a diverse clientele from across the city and have gained recognition for our exceptional customer experience and actually We've grown from a team of two passionate beauty experts to a family of 25+ skilled professionals</p>
+        <p>Over the years, we have introduced Lashes extension and Press-on Nails , received ABBP (Africa Best Beauty Products), and stayed true to our commitment to eco-friendly practices, using biodegradable packaging and sourcing ingredients ethically and "Giving back is at the heart of what we do, partnering with local organizations to empower women through education.</p>
+        <p>Today, we continue to serve our community with a welcoming space where everyone feels beautiful and the mission to value and expand our reach, bringing our unique approach to beauty to more communities., with the vision to transform how people think about beauty, making it a tool for empowerment and self-expression. looking ahead to a brighter, more beautiful future."</p>
+        <br>
+        <h4>By the way we have New Arrivals for you!!!</h4>
+               <a href="arrivals.html" class="btn">NEW ARRIVALS</a>
+      </div> 
+      </section>
+      <!--Products -->
+     <section class="Products" id="Products">
+        <div class="Heading">
+            <h2>Our Popular Products</h2>
+        </div>
+        <!--Container-->
+        <div class="Products-Container">
+            <div class="box" id="Products-Image" data-name="Product Name">
+                <img src="Lashes 3.jpeg" alt="">
+                <h3>XO Wispy Lashes</h3>
+                <div class="content">
+                    <span>11000 rwf</span>
+                    <a href="#">Add to Cart</a>
+                </div>
+            </div>
+            <div class="box" data-name="Product Name">
+                <img src="Lash 1.jpeg" alt="">
+                <h3>XO Mega Lashes</h3>
+                <div class="content">
+                    <span>12000 rwf</span>
+                    <a href="#">Add to Cart</a>
+                </div>
+            </div>
+            <div class="box" data-name="Product Name">
+                <img src="Lash 2.jpeg" alt="">
+                <h3>Vegan Luxe Lashes</h3>
+                <div class="content">
+                    <span>13000 rwf</span>
+                    <a href="#">Add to Cart</a>
+                </div>
+            </div>
+            <div class="box" data-name="Product Name">
+                <img src="Press On 3.jpeg" alt="">
+                <h3>Pink Nails with Flowers</h3>
+                <div class="content">
+                    <span>8000 rwf</span>
+                    <a href="#">Add to Cart</a>
+                </div>
+            </div>
+            <div class="box" data-name="Product Name">
+                <img src="Press On 2.jpeg" alt="">
+                <h3>Nude Brown Nails</h3>
+                <div class="content">
+                    <span>5000 rwf</span>
+                    <a href="#">Add to Cart</a>
+                </div>
+            </div>
+            <div class="box" data-name="Product Name">
+                <img src="Press On 1.jpeg" alt="">
+                <h3>Pink & White Nails with a Bow</h3>
+                <div class="content">
+                    <span>7000 rwf</span>
+                    <a href="#">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+     </section>
+     <!--Customers-->
+     <section class="Customers" id="Customers">
+<div class="Heading">
+    <h2>OUR CUSTOMERS</h2>
+</div>
+<!--Container-->
+<div class="Customers-Container">
+    <div class="box">
+        <div class="Stars">
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star-half'></i>
+            <i class='bx bx-star' ></i>
+        </div>
+        <br>
+        <p>"I can not get enough of these lashes and nails! They are my go-to for when I need to look fabulous in a pinch."</p>
+        <br>
+        <h2>Keza Fidella</h2>
+        <img src="Rev1.jpg" alt="">
+    </div>
+    <div class="box">
+        <div class="Stars">
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star-half'></i>
+        </div>
+        <br>
+        <p>"It is like a full beauty makeover in minutes. The lashes and press-ons together make me feel so put-together!"</p>
+        <br>
+        <h2>Anasa Faith</h2>
+        <img src="ev3.jpg" alt="">
+    </div>
+    <div class="box">
+        <div class="Stars">
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+        </div>
+        <br>
+        <p>"High-quality and so easy to use! The lashes and nails save me time while still giving me a professional look."</p>
+        <br>
+        <h2>Isimbi Brianna</h2>
+        <img src="ev2.jpg" alt="">
+    </div>
+</div>
+     </section>
+     <section class="Footer">
+        <div class="Footer-Box">
+        <h3>Lustre & Bloom Haven</h3>
+        <p>
+            We here For you!!!<br>
+            bringing our unique products<br>
+            for empowerment and self-expression<br>
+            </p>
+            <br>
+            <p><strong>YOU CAN ALSO VISIT US ON</strong></p>
+            <div class="Social">
+            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+            <a href="#"><i class='bx bxl-twitter'></i></a>
+            <a href="#"><i class='bx bxl-tiktok'></i></a>
+        </div>
+    </div>
+
+    <div class="Footer-Box">
+        <h3>Support</h3>
+        <ul>
+        <li><a href="products.html">Product</a></li>
+        <li><a href="Help.html">Help & Support</a></li>
+        <li><a href="return-policy.html">Return Policy</a></li>
+        <li><a href="terms-of-use.html">Terms Of Use</a></li>
+    </ul>
+    </div>
+    <div class="Footer-Box">
+        <h3>View Guides</h3>
+        <li><a href="customer.html">Testimonies</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="careers.html">Careers</a></li>
+       <li><a href="branches.html">Our Branches</a></li>
+        </div>
+        <div class="Footer-Box">
+            <h3>Contact</h3>
+            <div class="Contact">
+                <span><i class='bx bxs-envelope'></i><a href="mailto:abizeyetracy@gmail.com">abizeyetracy@gmail.com</a></span>
+                <span><i class='bx bxs-phone' ></i><a href="tel:+250 787 877 658">+250 787 877 658</a></span>
+                <span><i class='bx bxs-message-rounded'></i><a href="sms:+250 787 877 658">+250 787 877 658</a></span>
+                <span><i class='bx bxs-map' ></i>KK 325 Kicukiro Kigali City, Rwanda </span>
+                <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<a href="https://maps.app.goo.gl/weNTMX8a2qpo4GfZ9" target="_blank" style="padding: 5px 10px; background-color: #faa2a5; color: #000000; text-decoration: none; border-radius: 5px; text-align: center;">
+Find Us Here
+</a>
+<div class="Footer-map" style="text-align: center; margin-top: 20px;">
+
+    <h2>Our Location</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d498.4322958251347!2d30.107912455394818!3d-1.9707622035985795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2srw!4v1731937934911!5m2!1sen!2srw"
+    width="350" 
+    height="225" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+</iframe>"
+</div>
+
+            </div>
+        </div>
+         </section>
+         <!--Copyright-->
+         <div class="Copyright">
+            <p>&#169; 2024 Lustre & Bloom Haven. All rights reserved.</p>
+         </div>
+<script src="Main.js" defer></script>       
+</body>
+</html>

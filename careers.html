@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers</title>
+    <style>
+        /* Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+Ahom&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-padding-top: 5rem;
+            scroll-behavior: smooth;
+            list-style: none;
+            text-decoration: none;
+        }
+        /* Variables */
+        :root{
+            --main-color:  #e48b8b;
+            --second-color: #f5b1b3;
+            --text-color: #1b1b1b;
+            --background-color: #ea95c3;
+        
+            /*Box Shadow*/
+            --box-shadow: 2px 2px 10px 4px rgb(14 55 54 / 15%);
+        }
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        header{
+            position: fixed;
+            width: 100%;
+            top: 0;
+            right: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 65px;
+            transition: 0.3s linear;
+            background-color: #ea9091;
+        }
+        header .shadow{
+        background-color: #ea9091;
+        box-shadow: var(--box-shadow);
+        }
+        .logo img{
+            width: 85px;
+            mix-blend-mode: multiply;
+        }
+        .navbar {
+            display: flex;
+        }
+        .navbar a{
+            padding: 8px 17px;
+            color: #fff;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            font-weight: 500;
+           
+        }
+        .navbar a:hover{
+            background-color: #eb6c6cce;
+            border-radius: 0.3rem;
+            transition: 0.2s all linear;
+        }
+        .navbar .active{
+            top: 100%;
+        }
+        </style>
+</head>
+<body>
+
+   <!-- Navbar -->
+   <header>
+    <a href="#" class="logo">
+        <img src="Haven.png" alt="Beauty Glam">
+    </a>
+
+<!--  Links -->
+<ul class="navbar">
+<a href="index.html">Home</a>
+<a href="#apply">Apply Now</a>
+</ul>
+ </header> 
+
+    <h1 style="color: #e48b8b; text-align: center; padding-top: 150px; font-size: 2.5rem;">JOIN OUR TEAM</h1><br><br><br>
+<p style="color: #f72f9a; text-align: center; font-size: 1.7rem;">Be part of <strong>Lustre & Bloom Haven</strong> <br>and help us bring innovative products to the world.</p><br><br>
+<h2 style="color: #ea95c3; text-align: center; font-size: 2rem;">Current Openings</h2><br>
+<ul>
+    <P style="color: #f79397; text-align: center; font-size: 1.6rem;"><strong>Marketing Specialist</strong> – Remote – Apply by Dec 15, 2024</P>
+    <P style="color: #f79397; text-align: center; font-size: 1.6rem;"><strong>Customer Support Representative</strong> – Full-time – Apply by Dec 20, 2024</P><br><br>
+</ul>
+<h2 style="color: #ea95c3; text-align: center; font-size: 2rem;">Why Work With Us?</h2><br>
+<p style="color: #f72f9a; text-align: center; font-size: 1.7rem;">We offer competitive salaries, <br>a collaborative work environment, and opportunities for growth.</p><br><br>
+<section class="apply" id="apply">
+<h2 style="color: #ea95c3; text-align: center; font-size: 2rem;">How to Apply</h2><br>
+<p style="color: #f72f9a; text-align: center; font-size: 1.7rem;">Send your resume and cover letter to<br> <a href="mailto:abizeyetracy@gmail.com">abizeyetracy@gmail.com</a></p>
+</section>
+</body>
+</html>

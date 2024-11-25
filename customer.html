@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Stories</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+ 
+        /* Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+Ahom&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-padding-top: 5rem;
+            scroll-behavior: smooth;
+            list-style: none;
+            text-decoration: none;
+        }
+        /* Variables */
+        :root{
+            --main-color:  #e48b8b;
+            --second-color: #f5b1b3;
+            --text-color: #1b1b1b;
+            --background-color: #ea95c3;
+        
+            /*Box Shadow*/
+            --box-shadow: 2px 2px 10px 4px rgb(14 55 54 / 15%);
+        }
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        header{
+            position: fixed;
+            width: 100%;
+            top: 0;
+            right: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 65px;
+            transition: 0.3s linear;
+            background-color: #ea9091;
+        }
+        header .shadow{
+        background-color: #ea9091;
+        box-shadow: var(--box-shadow);
+        }
+        .logo img{
+            width: 85px;
+            mix-blend-mode: multiply;
+        }
+        .navbar {
+            display: flex;
+        }
+        .navbar a{
+            padding: 8px 17px;
+            color: #fff;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            font-weight: 500;
+           
+        }
+        .navbar a:hover{
+            background-color: #eb6c6cce;
+            border-radius: 0.3rem;
+            transition: 0.2s all linear;
+        }
+        .navbar .active{
+            top: 100%;
+        }
+    
+        /* General Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            color: #f5b1b3;
+            margin-bottom: 10px;
+        }
+     
+/* Swiper Styling */
+.swiper {
+            width: 100%;
+            padding: 30px 0;
+        }
+        .swiper-slide {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .swiper-slide img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            margin-bottom: 15px;
+            border: 3px solid #ea9091;
+        }
+        .swiper-slide h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #333;
+        }
+        .swiper-slide p {
+            margin: 10px 0;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 10px;
+            background: #ea9091;
+            color: white;
+        }
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 10px;
+            background: #ea9091;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+ <!-- Navbar -->
+ <header>
+    <a href="#" class="logo">
+        <img src="Haven.png" alt="Beauty Glam">
+    </a>
+
+<!--  Links -->
+<ul class="navbar">
+<a href="index.html">Home</a>
+<a href="review.html">Give Yours</a>
+</ul>
+ </header> 
+<h1 style="color: #e48b8b; text-align: center; padding-top: 150px; text-transform: uppercase;">Customer Stories and Testimonial</h1>
+
+<div class="container">
+    <h2>What Our Customers Are Saying;</h2>
+
+
+<!-- Swiper Container -->
+<div class="swiper">
+    <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+            <img src="Lash Extensions.jpeg" alt="Customer Image">
+            <h3>Princess Belindah</h3>
+            <p>"I absolutely love the products from Lustre & Bloom Haven! They have transformed my self-care routine. Highly recommended!"</p>
+        </div>
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+            <img src="mmlashes 6.jpeg" alt="Customer Image">
+            <h3>Ishimwe Chanella</h3>
+            <p>"Great quality and amazing customer service. I couldn't be happier with my purchase!"</p>
+        </div>
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+            <img src="Mlashes1.jpeg" alt="Customer Image">
+            <h3>Holy Kausali</h3>
+            <p>"The new product arrivals are always exciting. Lustre & Bloom Haven has become my go-to for all my beauty needs!"</p>
+        </div>
+    </div>
+    <!-- Swiper Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Swiper Navigation Buttons -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Lustre & Bloom Haven. All rights reserved.</p>
+</footer>
+
+ <!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>>
+<script>
+const swiper = new Swiper('.swiper', {
+        loop: true, 
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+</script>
+</body>
+</html>

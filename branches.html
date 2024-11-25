@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branches</title>
+    <style>
+        /* Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+Ahom&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-padding-top: 5rem;
+            scroll-behavior: smooth;
+            list-style: none;
+            text-decoration: none;
+        }
+        /* Variables */
+        :root{
+            --main-color:  #e48b8b;
+            --second-color: #f5b1b3;
+            --text-color: #1b1b1b;
+            --background-color: #ea95c3;
+        
+            /*Box Shadow*/
+            --box-shadow: 2px 2px 10px 4px rgb(14 55 54 / 15%);
+        }
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        header{
+            position: fixed;
+            width: 100%;
+            top: 0;
+            right: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 65px;
+            transition: 0.3s linear;
+            background-color: #ea9091;
+        }
+        header .shadow{
+        background-color: #ea9091;
+        box-shadow: var(--box-shadow);
+        }
+        .logo img{
+            width: 85px;
+            mix-blend-mode: multiply;
+        }
+        .navbar {
+            display: flex;
+        }
+        .navbar a{
+            padding: 8px 17px;
+            color: #fff;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            font-weight: 500;
+           
+        }
+        .navbar a:hover{
+            background-color: #eb6c6cce;
+            border-radius: 0.3rem;
+            transition: 0.2s all linear;
+        }
+        .navbar .active{
+            top: 100%;
+        }
+        </style>
+</head>
+<body>
+    
+   <!-- Navbar -->
+   <header>
+    <a href="#" class="logo">
+        <img src="Haven.png" alt="Beauty Glam">
+    </a>
+
+<!--  Links -->
+<ul class="navbar">
+<a href="index.html">Home</a>
+<a href="#find">Find Us</a>
+</ul>
+ </header> 
+    <h1 style="color: #e48b8b; text-align: center; padding-top: 150px; font-size: 2.5rem;">Our Branches</h1><br><br>
+    <p style="color: #f72f9a; text-align: center; font-size: 1.5rem;">Visit one of our branches near you to experience our products firsthand.</p><br><br>
+    <section>
+        <h2 style="color: #ea95c3; text-align: center; font-size: 2rem;">Branch Locations</h2><br>
+        <ul>
+            <li style="color: #f79397; text-align: center; font-size: 1.6rem;"><strong>Branch 1:</strong> KK 325 ST, Kigali City, Rwanda – +250 787 877 658</li>
+            <li style="color: #f79397; text-align: center; font-size: 1.6rem;"><strong>Branch 2:</strong> 123 Main Street, Guangzhou, China – +1 678 250 785 536 506</li>
+        </ul><br><br>
+    </section>
+    <section class="find" id="find">
+        <div class="Footer-map" style="text-align: center; margin-top: 20px;">
+                 <h2 style="color: #ea95c3; text-align: center; font-size: 2rem;">Our Location</h2><br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d498.4322958251347!2d30.107912455394818!3d-1.9707622035985795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2srw!4v1731937934911!5m2!1sen!2srw"
+            width="800" 
+            height="450" 
+            margin-top="20px"
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>"
+        </div>
+    </section>
+
+</body>
+</html>
